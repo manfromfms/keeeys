@@ -1,4 +1,4 @@
 # keeeys
-Encrease your typing speed
+Increase your typing speed
 
-I started this project for myself and it is currently in a very early development stage.
+I started this project for myself, and it is currently in a very early development stage.
