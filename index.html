@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keeeys</title>
+</head>
+<body>
+
+<div class="content">
+    <div class="task" id="task">
+
+    </div>
+</div>
+
+<!-- Dictionary -->
+<script src="./scripts/dictionaries/english-100k.js"></script>
+
+<!-- Scripts -->
+<script src="scripts/generator/generator.js"></script>
+
+<script>
+    const gen = new Generator(en_100k)
+
+    let startTime = Date.now()
+    console.log(gen.generate(30))
+    console.log(Date.now() - startTime)
+</script>
+
+</body>
+</html>
