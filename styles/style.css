@@ -1,0 +1,32 @@
+body {
+     font-family: "Noto Sans Mono", monospace;
+     font-optical-sizing: auto;
+     font-style: normal;
+     font-variation-settings: "wdth" 100;
+     background-color: black;
+}
+
+.task_letter {
+     color: white;
+     padding: 0;
+     font-size: x-large;
+}
+
+.past {
+     color: gray;
+}
+
+.wrong {
+     color: lightsalmon;
+}
+
+.current {
+     color: black;
+     background: lightblue;
+     border-radius: 4px;
+}
+
+.task {
+     display: flex;
+     justify-content: center;
+}

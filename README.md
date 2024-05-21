@@ -1,4 +1,5 @@
 # keeeys
 Increase your typing speed
 
-I started this project for myself, and it is currently in a very early development stage.
+Here I have made an algorithm that tries to find words expected to be typed slower.
+It is based on top 100k commonly used English words.

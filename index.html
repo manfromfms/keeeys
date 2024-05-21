@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Keeeys</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
 
@@ -17,13 +23,28 @@
 
 <!-- Scripts -->
 <script src="scripts/generator/generator.js"></script>
+<script src="scripts/tasks/tasks.js"></script>
 
 <script>
     const gen = new Generator(en_100k)
 
-    let startTime = Date.now()
-    console.log(gen.generate(30))
-    console.log(Date.now() - startTime)
+    update_task(gen.generate(10))
+
+    window.addEventListener('keydown', (e) => {
+        console.log(e.key)
+
+        const current = document.querySelector('.current')
+
+        if (current.innerHTML === '_' && e.key === ' ') next_letter()
+        else if (current.innerHTML !== '_' && current.innerHTML === e.key) next_letter()
+        else wrong()
+
+        if(prev_letter !== ' ' && e.key !== ' ' && Date.now() - last_date >= 0) gen.append(prev_letter, e.key, Date.now() - last_date)
+
+        if(e.key === ' ') last_date = Infinity
+        else last_date = Date.now()
+        prev_letter = e.key
+    })
 </script>
 
 </body>
